@@ -1,4 +1,9 @@
 * repository / hosts the [DOM Standard](https://dom.spec.whatwg.org/)
+* DOM
+  * 👀:= platform-neutral model -- for -- 👀
+    * events,
+    * aborting activities,
+    * node trees
 
 ## Community
 
