@@ -379,17 +379,20 @@ dictionary EventInit {
   * uses
     * define [Touch Events](https://w3c.github.io/touch-events/) or related
 
+* `Event.composedPath`
+  * -- associated to -- EACH `event`
+  * == `list<structs>` /
+    * EACH `struct` ==
+      * invocation target `: EventTarget` +
+      * invocation-target-in-shadow-tree `: boolean` +
+      * shadow-adjusted target `: potential event target` +
+      * relatedTarget `: potential event target` +
+      * touch target list `: list of potential event targets` +
+      * root-of-closed-tree `: boolean` +
+      * slot-in-closed-tree `: boolean`
+    * by default, empty list
+
 * TODO:
-<p>An <a>event</a> has an associated <dfn export for=Event>path</dfn>. A <a for=Event>path</a> is a
-<a for=/>list</a> of <a for=/>structs</a>. Each <a for=/>struct</a> consists of an
-<dfn for=Event/path>invocation target</dfn> (an {{EventTarget}} object), an
-<dfn for=Event/path>invocation-target-in-shadow-tree</dfn> (a boolean), a
-<dfn for=Event/path>shadow-adjusted target</dfn> (a <a>potential event target</a>), a
-<dfn id=event-path-relatedtarget for=Event/path>relatedTarget</dfn> (a
-<a>potential event target</a>), a <dfn for=Event/path>touch target list</dfn> (a <a for=/>list</a>
-of <a>potential event targets</a>), a <dfn for=Event/path>root-of-closed-tree</dfn> (a boolean), and
-a <dfn for=Event/path>slot-in-closed-tree</dfn> (a boolean). A <a for=Event>path</a> is initially
-the empty list.</p>
 
 <dl class=domintro>
  <dt><code><var>event</var> = new <a constructor lt="Event()">Event</a>(<var>type</var> [, <var>eventInitDict</var>])</code>
