@@ -934,6 +934,9 @@ when something has occurred.
   * ==
     * `type: string`
     * `callback: null | EventListener`
+      * 👀callback vs `EventListener`👀
+        * `EventListener` is a broader concept
+          * Reason: 🧠check ALL parts of event listener 🧠
     * `capture: boolean = false`
       * == by default, `false`
     * `passive: null | boolean = null`
@@ -948,9 +951,6 @@ when something has occurred.
       * `EventTarget.removeEventListener()` / 's arguments == `EventTarget.addEventListener()` 's arguments
       * pass an `AbortController.signal` | `addEventListener()` & abort it
   * _Example:_ [2. here](samples/2.%20events/index.js)
-
-<p class=note>Although <a for="event listener">callback</a> is an {{EventListener}}
-object, an <a>event listener</a> is a broader concept as can be seen above.
 
 <p>Each {{EventTarget}} object also has an associated <dfn export>get the parent</dfn> algorithm,
 which takes an <a>event</a> <var>event</var>, and returns an {{EventTarget}} object. Unless
